@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2005/12/27 21:00:55.625.pas,C:\Chc\Prg\TesePos\editSel.pas=</Transaction>
+    <Transaction>2006/03/17 22:34:29.703.pas,C:\Chc\Prg\TesePos\Unit1.pas=C:\Chc\Prg\TesePos\uMemoria.pas</Transaction>
+    <Transaction>2006/03/18 22:03:12.828.pas,C:\Chc\Prg\TesePos\Unit1.pas=C:\Chc\Prg\TesePos\uRegistraExten.pas</Transaction>
+    <Transaction>2006/06/25 17:55:51.015.pas,C:\Chc\Prg\TesePos\Unit7.pas=C:\Chc\Prg\TesePos\uFisico.pas</Transaction>
+    <Transaction>2006/06/25 17:55:51.015.dfm,C:\Chc\Prg\TesePos\Unit7.dfm=C:\Chc\Prg\TesePos\uFisico.dfm</Transaction>
+    <Transaction>2006/06/25 18:10:58.921.pas,C:\Chc\Prg\TesePos\Unit7.pas=C:\Chc\Prg\TesePos\uTemplates.pas</Transaction>
+    <Transaction>2006/06/25 18:10:58.921.dfm,C:\Chc\Prg\TesePos\Unit7.dfm=C:\Chc\Prg\TesePos\uTemplates.dfm</Transaction>
+    <Transaction>2006/11/11 19:05:37.375.bdsproj,C:\Chc\Prg\TesePos\App.bdsproj=C:\Chc\Prg\TesePos\brModelo.bdsproj</Transaction>
+    <Transaction>2007/04/14 18:24:30.187.pas,C:\Chc\Prg\TesePos\uTemplates.pas=</Transaction>
+    <Transaction>2007/04/14 18:24:30.203.dfm,C:\Chc\Prg\TesePos\uTemplates.dfm=</Transaction>
+    <Transaction>2007/04/14 19:11:05.562.pas,C:\Chc\Prg\TesePos\Unit1.pas=C:\Chc\Prg\TesePos\FisicoMng.pas</Transaction>
+    <Transaction>2007/04/16 23:47:30.625.pas,C:\Chc\Prg\TesePos\Unit1.pas=C:\Chc\Prg\TesePos\ShowFisico.pas</Transaction>
+    <Transaction>2007/04/16 23:47:30.640.dfm,C:\Chc\Prg\TesePos\Unit1.dfm=C:\Chc\Prg\TesePos\ShowFisico.dfm</Transaction>
+    <Transaction>2007/05/10 23:43:15.265.pas,C:\Chc\Prg\TesePos\Unit1.pas=C:\Chc\Prg\TesePos\uTemplFisico.pas</Transaction>
+    <Transaction>2007/05/10 23:43:15.265.dfm,C:\Chc\Prg\TesePos\Unit1.dfm=C:\Chc\Prg\TesePos\uTemplFisico.dfm</Transaction>
+    <Transaction>2007/05/11 21:21:23.437.pas,C:\Chc\Prg\TesePos\Unit1.pas=C:\Chc\Prg\TesePos\uTemplate.pas</Transaction>
+    <Transaction>2007/05/12 21:42:26.687.pas,C:\Chc\Prg\TesePos\Unit1.pas=C:\Chc\Prg\TesePos\uEdtTemplFisico.pas</Transaction>
+    <Transaction>2007/05/12 21:42:26.687.dfm,C:\Chc\Prg\TesePos\Unit1.dfm=C:\Chc\Prg\TesePos\uEdtTemplFisico.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

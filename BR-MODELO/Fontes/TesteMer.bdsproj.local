@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2006/03/07 00:14:44.265.pas,C:\Documents and Settings\Rick\Meus documentos\Borland Studio Projects\Unit1.pas=C:\Chc\Prg\Testes\UtesteMer.pas</Transaction>
+    <Transaction>2006/03/07 00:14:44.281.dfm,C:\Documents and Settings\Rick\Meus documentos\Borland Studio Projects\Unit1.dfm=C:\Chc\Prg\Testes\UtesteMer.dfm</Transaction>
+    <Transaction>2006/03/07 00:14:50.718.bdsproj,C:\Documents and Settings\Rick\Meus documentos\Borland Studio Projects\Project1.bdsproj=C:\Chc\Prg\TesePos\TesteMer.bdsproj</Transaction>
+  </Transactions>
+</BorlandProject>

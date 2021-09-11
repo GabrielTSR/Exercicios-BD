@@ -1,0 +1,158 @@
+// ******************************************************************************
+// * This is an automatically generated file containing the ribbon resource for *
+// * your application.                                                          *
+// ******************************************************************************
+
+#include ".\brModeloRibbon.h"
+
+STRINGTABLE 
+BEGIN
+    cmdTabSistema_LabelTitle_RESID L"Sistema" /* LabelTitle cmdTabSistema_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    cmdTabEditar_LabelTitle_RESID L"Editar" /* LabelTitle cmdTabEditar_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    cmdTabConceitual_LabelTitle_RESID L"Esquema Conceitual" /* LabelTitle cmdTabConceitual_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    cmdTabLogico_LabelTitle_RESID L"Esquema L\x00f3gico" /* LabelTitle cmdTabLogico_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    cmdTabConfiguracao_LabelTitle_RESID L"Configura\x00e7\x00f5es" /* LabelTitle cmdTabConfiguracao_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    cmdGroupNovo_LabelTitle_RESID L"Novo" /* LabelTitle cmdGroupNovo_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    cmdGroupArquivo_LabelTitle_RESID L"Arquivo" /* LabelTitle cmdGroupArquivo_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    cmdGroupExportacao_LabelTitle_RESID L"Exporta\x00e7\x00e3o" /* LabelTitle cmdGroupExportacao_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    cmdGroupImpressao_LabelTitle_RESID L"Impress\x00e3o" /* LabelTitle cmdGroupImpressao_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    cmdGroupOpcoes_LabelTitle_RESID L"Op\x00e7\x00f5es" /* LabelTitle cmdGroupOpcoes_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    cmdGroupFerramentasConceitual_LabelTitle_RESID L"Ferramentas" /* LabelTitle cmdGroupFerramentasConceitual_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    cmdGroupFerramentasLogico_LabelTitle_RESID L"Ferramentas" /* LabelTitle cmdGroupFerramentasLogico_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    cmdGroupComandosConceitual_LabelTitle_RESID L"Comandos" /* LabelTitle cmdGroupComandosConceitual_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    cmdGroupComandosLogico_LabelTitle_RESID L"Comandos" /* LabelTitle cmdGroupComandosLogico_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    cmdNovoConceitual_LabelTitle_RESID L"Modelo Conceitual" /* LabelTitle cmdNovoConceitual_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    cmdNovoLogico_LabelTitle_RESID L"Modelo L\x00f3gico" /* LabelTitle cmdNovoLogico_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    cmdAbrir_LabelTitle_RESID L"Abrir" /* LabelTitle cmdAbrir_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    cmdSalvar_LabelTitle_RESID L"Salvar" /* LabelTitle cmdSalvar_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    cmdSalvarComo_LabelTitle_RESID L"Salvar Como ..." /* LabelTitle cmdSalvarComo_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    cmdFechar_LabelTitle_RESID L"Fechar" /* LabelTitle cmdFechar_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    cmdExportarJPEG_LabelTitle_RESID L"Exportar em JPEG" /* LabelTitle cmdExportarJPEG_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    cmdExportarBMP_LabelTitle_RESID L"Exportar em BMP" /* LabelTitle cmdExportarBMP_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    cmdImprimir_LabelTitle_RESID L"Imprimir" /* LabelTitle cmdImprimir_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    cmdGerarDicionario_LabelTitle_RESID L"Gerar Dicion\x00e1rio do Esquema" /* LabelTitle cmdGerarDicionario_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    cmdAjuda_LabelTitle_RESID L"Ajuda" /* LabelTitle cmdAjuda_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    cmdConfiguracoes_LabelTitle_RESID L"Configura\x00e7\x00f5es" /* LabelTitle cmdConfiguracoes_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    cmdCancelarConceitual_LabelTitle_RESID L"Cancelar" /* LabelTitle cmdCancelarConceitual_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    cmdCancelarLogico_LabelTitle_RESID L"Cancelar" /* LabelTitle cmdCancelarLogico_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    cmdAutoSalvar_LabelTitle_RESID L"Auto Salvar" /* LabelTitle cmdAutoSalvar_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    InternalCmd2_LabelTitle_RESID L"Label:InternalCmd2" /* LabelTitle InternalCmd2_LabelTitle_RESID: (null) */
+END
+
+APPLICATION_RIBBON    UIFILE    "D:\\Google Drive\\Puc(MG)\\8º Período (À Cursar 6)\\Trabalho de Conclusão de Curso II - 32h\\Aplicação\\Fontes\\Ribbon\\brModeloRibbon.bml"

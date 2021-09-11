@@ -1,0 +1,228 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{5C92B3F6-978F-4ACA-B55E-32A40B8BA3E4}</ProjectGuid>
+        <MainSource>brModelo.dpr</MainSource>
+        <Base>True</Base>
+        <Config Condition="'$(Config)'==''">Debug</Config>
+        <TargetedPlatforms>1</TargetedPlatforms>
+        <AppType>Application</AppType>
+        <FrameworkType>VCL</FrameworkType>
+        <ProjectVersion>14.3</ProjectVersion>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+        <Base_Win64>true</Base_Win64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+        <Cfg_2_Win32>true</Cfg_2_Win32>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <DCC_ImageBase>00400000</DCC_ImageBase>
+        <DCC_UsePackage>vcl;rtl;vclx;indy;inet;xmlrtl;vclie;inetdbbde;inetdbxpress;dbrtl;dsnap;dsnapcon;vcldb;soaprtl;VclSmp;dbexpress;dbxcds;inetdb;bdertl;vcldbx;webdsnap;websnap;adortl;ibxpress;teeui;teedb;tee;dss;visualclx;visualdbclx;vclactnband;vclshlctrls;Rave50CLX;Rave50VCL;dclOffice2k;RxCtl7;RxDB7;RxBDE7;QRExports;qrpt70;IntrawebDB_70_70;Intraweb_70_70;IW7TMSD7;IW7TMSGRIDDED7;IW7TMSGRIDD7;IW7TMSPLAND7;ArcIWLanguage_D7_70;ArcIWOpenSource_D7_IW70;ArcIWControlD7_70;ArcIWDialogs_d7_70;dclArcIWEnhanced_D7_70;ArcIWEnhanced_D7_70;dclArcIWGraphs_D7_70;ArcIWGraphs_D7_70;GridViewD7;FlexD7;tb2k_d7;vclZipForged7;WinSkinD7;$(DCC_UsePackage)</DCC_UsePackage>
+        <VerInfo_Keys>CompanyName=brModelo;FileDescription=Modelagem de bases de dados;FileVersion=2.0.0.0;InternalName=Chc - brModelo;LegalCopyright=FREE;LegalTrademarks=FREE;OriginalFilename=brModelo;ProductName=brModelo;ProductVersion=2.0.0;Comments=Por Chc Junho 2007 - Livre</VerInfo_Keys>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <DCC_Namespace>Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;System;Xml;Data;Datasnap;Web;Soap;Winapi;Xml.Win;System.Win;$(DCC_Namespace)</DCC_Namespace>
+        <VerInfo_MajorVer>2</VerInfo_MajorVer>
+        <DCC_PentiumSafeDivide>true</DCC_PentiumSafeDivide>
+        <DCC_K>false</DCC_K>
+        <DCC_N>true</DCC_N>
+        <DCC_S>false</DCC_S>
+        <DCC_F>false</DCC_F>
+        <DCC_SymbolReferenceInfo>1</DCC_SymbolReferenceInfo>
+        <VerInfo_Locale>1046</VerInfo_Locale>
+        <DCC_E>false</DCC_E>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <DCC_ExeOutput>.\EXE</DCC_ExeOutput>
+        <DCC_UnitSearchPath>C:\Users\JAINE MOREIRA\Dropbox\Projects\Delphi\Ribbon Framework for Delphi 1.2\Lib;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <DCC_DcuOutput>.\DCU</DCC_DcuOutput>
+        <Icon_MainIcon>brModelo_Icon.ico</Icon_MainIcon>
+        <DCC_Namespace>Data.Win;Datasnap.Win;Web.Win;Soap.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win64)'!=''">
+        <Icon_MainIcon>brModelo_Icon.ico</Icon_MainIcon>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+        <DCC_DebugInformation>false</DCC_DebugInformation>
+        <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+        <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+        <DCC_Optimize>false</DCC_Optimize>
+        <DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <Manifest_File>None</Manifest_File>
+        <VerInfo_MajorVer>3</VerInfo_MajorVer>
+        <DCC_UnitSearchPath>D:\Dropbox\Projects\Delphi\Ribbon Framework for Delphi 1.2\Lib;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <Icon_MainIcon>brModelo.ico</Icon_MainIcon>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=3.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <DCC_ExeOutput>.\EXE</DCC_ExeOutput>
+        <DCC_DcuOutput>.\DCU</DCC_DcuOutput>
+    </PropertyGroup>
+    <ItemGroup>
+        <DelphiCompile Include="$(MainSource)">
+            <MainSource>MainSource</MainSource>
+        </DelphiCompile>
+        <DCCReference Include="uApp.pas">
+            <Form>brFmPrincipal</Form>
+        </DCCReference>
+        <DCCReference Include="mer.pas"/>
+        <DCCReference Include="uAux.pas"/>
+        <DCCReference Include="uDM.pas">
+            <Form>brDM</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="att.pas"/>
+        <DCCReference Include="fmodal.pas">
+            <Form>brFmFModal</Form>
+        </DCCReference>
+        <DCCReference Include="impressao.pas">
+            <Form>brFmImpress</Form>
+        </DCCReference>
+        <DCCReference Include="relatorio.pas"/>
+        <DCCReference Include="preview.pas">
+            <Form>brFmForm_view</Form>
+        </DCCReference>
+        <DCCReference Include="dic.pas">
+            <Form>brFmDic</Form>
+        </DCCReference>
+        <DCCReference Include="dicFull.pas">
+            <Form>brFmDicFull</Form>
+        </DCCReference>
+        <DCCReference Include="config.pas">
+            <Form>brFmCfg</Form>
+        </DCCReference>
+        <DCCReference Include="CfgFonte.pas">
+            <Form>brFmtCfgFonte</Form>
+        </DCCReference>
+        <DCCReference Include="Questao.pas">
+            <Form>brFmQuestao</Form>
+        </DCCReference>
+        <DCCReference Include="ajuda.pas"/>
+        <DCCReference Include="xsl.pas">
+            <Form>brFmVisuXSLT</Form>
+        </DCCReference>
+        <DCCReference Include="trocaXsl.pas">
+            <Form>brFmInsXSL</Form>
+        </DCCReference>
+        <DCCReference Include="dlg.pas">
+            <Form>brFmDlgSaveAll</Form>
+        </DCCReference>
+        <DCCReference Include="uSobre.pas">
+            <Form>brFmSobre</Form>
+        </DCCReference>
+        <DCCReference Include="Inspector.pas"/>
+        <DCCReference Include="uMemoria.pas"/>
+        <DCCReference Include="uRegistraExten.pas"/>
+        <DCCReference Include="BiLista.pas"/>
+        <DCCReference Include="uFisico.pas">
+            <Form>brFmFisico</Form>
+        </DCCReference>
+        <DCCReference Include="FisicoMng.pas"/>
+        <DCCReference Include="ShowFisico.pas">
+            <Form>brFmShowFisico</Form>
+        </DCCReference>
+        <DCCReference Include="uTemplFisico.pas">
+            <Form>brFmTmplFisico</Form>
+        </DCCReference>
+        <DCCReference Include="uTemplate.pas"/>
+        <DCCReference Include="uEdtTemplFisico.pas">
+            <Form>BrFmEdtTemplFisico</Form>
+        </DCCReference>
+        <DCCReference Include="Ribbon\RibbonMarkup.pas"/>
+        <DCCReference Include="ufrmSobre.pas">
+            <Form>frmSobre</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Release">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Delphi.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Delphi.Personality>
+                <Source>
+                    <Source Name="MainSource">brModelo.dpr</Source>
+                </Source>
+                <VersionInfo>
+                    <VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+                    <VersionInfo Name="AutoIncBuild">False</VersionInfo>
+                    <VersionInfo Name="MajorVer">2</VersionInfo>
+                    <VersionInfo Name="MinorVer">0</VersionInfo>
+                    <VersionInfo Name="Release">0</VersionInfo>
+                    <VersionInfo Name="Build">0</VersionInfo>
+                    <VersionInfo Name="Debug">False</VersionInfo>
+                    <VersionInfo Name="PreRelease">False</VersionInfo>
+                    <VersionInfo Name="Special">False</VersionInfo>
+                    <VersionInfo Name="Private">False</VersionInfo>
+                    <VersionInfo Name="DLL">False</VersionInfo>
+                    <VersionInfo Name="Locale">1046</VersionInfo>
+                    <VersionInfo Name="CodePage">1252</VersionInfo>
+                </VersionInfo>
+                <VersionInfoKeys>
+                    <VersionInfoKeys Name="CompanyName">brModelo</VersionInfoKeys>
+                    <VersionInfoKeys Name="FileDescription">Modelagem de bases de dados</VersionInfoKeys>
+                    <VersionInfoKeys Name="FileVersion">2.0.0.0</VersionInfoKeys>
+                    <VersionInfoKeys Name="InternalName">Chc - brModelo</VersionInfoKeys>
+                    <VersionInfoKeys Name="LegalCopyright">FREE</VersionInfoKeys>
+                    <VersionInfoKeys Name="LegalTrademarks">FREE</VersionInfoKeys>
+                    <VersionInfoKeys Name="OriginalFilename">brModelo</VersionInfoKeys>
+                    <VersionInfoKeys Name="ProductName">brModelo</VersionInfoKeys>
+                    <VersionInfoKeys Name="ProductVersion">2.0.0</VersionInfoKeys>
+                    <VersionInfoKeys Name="Comments">Por Chc Junho 2007 - Livre</VersionInfoKeys>
+                </VersionInfoKeys>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k170.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp170.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                </Excluded_Packages>
+            </Delphi.Personality>
+            <Platforms>
+                <Platform value="Win32">True</Platform>
+                <Platform value="Win64">False</Platform>
+            </Platforms>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <Import Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')" Project="$(BDS)\Bin\CodeGear.Delphi.Targets"/>
+    <Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+</Project>

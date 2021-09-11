@@ -1,0 +1,74 @@
+#
+# Carlos H. Cândido
+# Ajuda rápida do sistema.
+# 
+[ALINHAMENTOLT]
+Reposiciona o controle quanto a pasição no modelo (esquerda e direita).
+[ALINHAMENTOWH]
+Reposiciona o controle quanto a altura e largura.
+[OBS]
+Algo importante a ser anotado para posterior observação.
+[ID]
+Identificador único do objeto no modelo.
+[Auto Relacionado]
+A entidade está auto relacionada
+[Especializada]
+A entidade está especializada
+[Ent. Ass. Relação: Nome]
+Nome do relacionamento contido na entidade assossiativa
+[Ent. Ass. Relecao: Dicionario]
+Dicionário de dados do relacionamento contido na entidade assossiativa
+[Ent. Ass. Relecao: Observacao]
+Algo importante a ser anotado para posterior observação sobre o relacionamento contido na entidade assossiativa
+[Card. Fixar posição]
+Fixar posição: Se fixada, a cardinalidade não se moverá ao mover-se a entidade ou relacionamento ao qual ela esteja vinculada.
+[Card. Posição da Linha]
+Alinhamento da fixação da cardinalidade
+[Card. Tamanho aut.]
+Controle do tamanho do desenho da cardinalidade
+[Entidade fraca]
+Tipo de entidade
+[Cardinalidade]
+[Atrib. tamanho aut.]
+Controle do tamanho do desenho do atributo
+[Atrib. Desvio]
+Desvia o encaixe da ligação do atributo ao relacionamento (desvio em pontos)
+[Posicionamento]
+Alinhamento da fixação do atributo
+[Identificador]
+O atributo pode ser identificador, Opcional, composto e/ou multivalorado
+[Opcional]
+O atributo pode ser identificador, Opcional, composto e/ou multivalorado
+[Composto]
+O atributo pode ser identificador, Opcional, composto e/ou multivalorado
+[Multivalorado]
+O atributo pode ser identificador, Opcional, composto e/ou multivalorado
+[Card. Mínima]
+Cardinalidade mínima do atributo.
+Ex: (1, n), neste caso o "1"
+[Card. Máxima]
+Cardinalidade máxima do atributo.
+Ex: (1, n), neste caso o "n"
+[TipoDoValor]
+Tipo do atributo, podendo ser por exemplo Texto(n), Número(n) ou boleano.
+[Exclusiva]
+Especialização exclusiva (onde A é B "ou" C) não exclusiva (A pode ser B e/ou C)
+[Esp. Parcial]
+Especialização parcial
+[Chave Primária]
+[Chave Estrangeira]
+[Tipo]
+Tipo de dado no modelo
+[TabOrigem]
+Integridade referencial: Tabela de origem do campo chave estrangeira.
+[CampoOrigem]
+Integridade referencial: Campo de origem da chave estrangeira.
+[Posição (Índice)]
+Ordenamento do campo dentro a tabela
+[Cor]
+[Qtd. Campos]
+[Texto TamAuto]
+[Texto Cor]
+[Moldura]
+Forma de desenho da moldura do texto.
+[Alin. Texto]
