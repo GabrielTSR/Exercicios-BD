@@ -1,0 +1,7 @@
+1. O banco de dados possui a tarefa importante de registrar e salvar dados para que seja possível haver uma organização e utilização de conteúdos gerados em uma sessão anterior. Exemplos de bancos de dados SQL (que possuem uma maior organização dos conteúdos) são Microsoft SQL Server, Oracle MariaDB, MySQL, PostGreSQL, enquanto os não relacionais são MongoDB, Apache HBASE, Riak, Cassandra, Redis.
+
+2. Salvar informações do perfil de um usuário; salvar informações dos alunos no sistema da escola; controlar o estoque de uma loja, salvar a postagem de uma rede social; controlar lucros e perdas de uma empresa;  salvar informações dos funcionários de uma empresa; realizar backup voltando à um determinado ponto; organizar uma lista de compras; organizar notas dos alunos; gerar uma lista de afazeres e compromissos; salvar progresso do jogo.
+
+3. SGDB é um sistema responsável por gerenciar o banco de dados (agindo como camada de manipulação de dados). Trazendo mais segurança na questão da violação de concorrência de dados causados por acesso simultâneo, além de evitar a violação da consistência dos dados, não permitir a duplicação de informações, e possui formas de acesso gráfico a sua linguagem natural SQL.
+
+4. GA (Gerenciador de arquivos) possui uma qualidade um pouco inferior se comparado com o SGBD(Sistema Gerenciador de Banco de Dados); e o GA é mais direcionado ao armazenamento do sistema operacional, enquanto o SGBD se destaca mais em no armazenamento de aplicações.
