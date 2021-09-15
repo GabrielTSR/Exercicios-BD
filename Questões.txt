@@ -5,3 +5,9 @@
 3. SGDB é um sistema responsável por gerenciar o banco de dados (agindo como camada de manipulação de dados). Trazendo mais segurança na questão da violação de concorrência de dados causados por acesso simultâneo, além de evitar a violação da consistência dos dados, não permitir a duplicação de informações, e possui formas de acesso gráfico a sua linguagem natural SQL.
 
 4. GA (Gerenciador de arquivos) possui uma qualidade um pouco inferior se comparado com o SGBD(Sistema Gerenciador de Banco de Dados); e o GA é mais direcionado ao armazenamento do sistema operacional, enquanto o SGBD se destaca mais em no armazenamento de aplicações.
+
+5. São métodos de acesso que nos possibilitam manipular um SGBD.
+
+DDL: Create, Alter, Drop.
+DML: Insert, Update, Delete, Select. Sendo eficaz para realizar a consulta e manipulação dos dados.
+DCL: responsável pelas permissões de acesso a base de dados.
