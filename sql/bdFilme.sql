@@ -72,3 +72,18 @@ foreign key (idClassificacao) #Especifica quem será a FK nesta tabela
 references tblClassificacao (idClassificacao), #Especifica de qual tabela virá a PK
 unique index (idFilme)
 );
+
+#Tabela de Diretor
+create table tblDiretor (
+idDiretor int not null auto_increment primary key,
+nome varchar(80) not null,
+dataNascimento date not null,
+nomeArtistico varchar (80),
+biografia text,
+foto varchar (80),
+idSexo int not null,
+constraint FK_Sexo_Diretor
+foreign key (idSexo)
+references tblSexo (idSexo),
+unique index (idDiretor)
+);
