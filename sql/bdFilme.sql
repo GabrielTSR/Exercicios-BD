@@ -352,6 +352,29 @@ INSERT INTO tblFilme (nome, duracao, dataLancamento, dataRelancamento, sinopse, 
               'The Lion King', 
               'filme-o_rei_leao-capa.jpg', 
               6);
+	
+      INSERT INTO tblFilme (nome, duracao, dataLancamento, dataRelancamento, sinopse, nomeOriginal, fotoCapa, idClassificacao, qtde)
+               # FORREST GUMP - O CONTADOR DE HISTÓRIAS
+	  VALUES ('FORREST GUMP - O CONTADOR DE HISTÓRIAS', 
+			  '02:20:00', 
+              '1994-12-07', 
+              null, 
+              'Quarenta anos da história dos Estados Unidos, vistos pelos olhos de Forrest Gump (Tom Hanks), um rapaz com QI abaixo da média e boas intenções. Por obra do acaso, ele consegue participar de momentos cruciais, como a Guerra do Vietnã e Watergate, mas continua pensando no seu amor de infância, Jenny Curran.',
+              'Forrest Gump', 
+              'FORREST.jpg', 
+              4,
+              3),
+              
+              # À ESPERA DE UM MILAGRE
+              ('À ESPERA DE UM MILAGRE', 
+              '03:09:00', 
+              '2000-03-10', 
+              null,
+              '1935, no corredor da morte de uma prisão sulista. Paul Edgecomb (Tom Hanks) é o chefe de guarda da prisão, que temJohn Coffey (Michael Clarke Duncan) como um de seus prisioneiros. Aos poucos, desenvolve-se entre eles uma relação incomum, baseada na descoberta de que o prisioneiro possui um dom mágico que é, ao mesmo tempo, misterioso e milagroso.',
+              'The Green Mile', 
+              'filme-o_rei_leao-capa.jpg', 
+              4,
+              4);
               
 SELECT * FROM tblfilme;
 
@@ -367,3 +390,85 @@ update tblFilme set duracao = '03:00:00' WHERE idFilme = 1;
 
 #Delete
 delete from tblGenero where idGenero = 1;
+
+INSERT INTO tblsexo (nome) VALUES ('M'), ('F');
+
+INSERT INTO tblnacionalidade(nome) VALUES ('Brasileiro'),( 'Estadunidense'),('sulafricano'),( 'albanês'),( 'alemão'),( 'argentino'),( 'australiano'),( 'austríaco'),( 'japonês');
+
+INSERT INTO tblAtor(nome, nomeArtistico, dataNascimento, dataFalecimento, biografia, foto, idSexo) VALUES
+#Um sonho de um liberdade
+(
+  'Bob Gunton',
+  null,
+  '1945-11-15',
+  null,
+  'ESTADO CIVIL
+Atividade Ator
+Nacionalidade Americano
+Nascimento 15 de novembro de 1945
+Idade 76 anos',
+'bob.jpg',
+1
+),
+(
+  'MORGAN FREEMAN',
+  null,
+  '1937-06-01',
+  null,
+  'ESTADO CIVIL
+Atividades Ator, Produtor de set, Produtor Executivo mais
+Nacionalidade Americano
+Nascimento 1 de junho de 1937 (Memphis, Tennesee, EUA)
+Idade 84 anos',
+'morganf.jpg',
+1
+);
+
+INSERT INTO tblAtor(nome, nomeArtistico, dataNascimento, dataFalecimento, biografia, foto, idSexo) VALUES
+#O rei leão
+(
+  'GARCIA JÚNIOR',
+  null,
+  '1967-03-02',
+  null,
+  null,
+'garciajunior.jpg',
+1
+),
+(
+  'JORGEH RAMOS',
+  null,
+  '1941-02-03',
+  '2014-12-01',
+  'locutor, poeta, jornalista, pintor e dublador brasileiro. Conhecido por ser a voz mais famosa de trailers no Brasil e por seu bordão: sexta-feira nos cinemas, trabalhou em diversos estúdios do Rio de Janeiro.',
+  'jorgehjunior.jpg',
+  1
+);
+
+INSERT INTO tblAtor(nome, nomeArtistico, dataNascimento, dataFalecimento, biografia, foto, idSexo)
+               # FORREST GUMP - O CONTADOR DE HISTÓRIAS
+	  VALUES ('Thomas Jeffrey Hanks', 
+			  'Tom Hanks', 
+              '1956-07-09', 
+              null, 
+              'Tom Hanks iniciou a carreira no cinema aos 24 anos, com um papel no filme de baixo orçamento Trilha de Corpos. Logo migrou para a TV, onde estrelou por dois anos a série Bosom Buddies. Nela passou a trabalhar com comédia, algo com o qual não estava habituado, rendendo convites para pequenas participações nas séries Táxi, Caras & Caretas e Happy Days.',
+              'fotoHanks.png', 
+              1),
+              ('Robin Virginia Gayle Wright', 
+			  'Robin Wright Penn', 
+              '1966-04-08', 
+              null, 
+              'Robin Wright nasceu em Dallas, Texas, filha de Gayle Gaston, uma vendedora de cosméticos, e Freddie Wright, funcionário de uma empresa farmacêutica. A atriz ficou famosa por seus papeis em House of Cards, Mulher-Maravilha, Corpo Fechado e Forrest Gump - O Contador de Histórias.Wright foi criada em San Diego, Califórnia.',
+              'fotoRobin.png', 
+              2);
+              
+INSERT INTO tblAtor(nome, nomeArtistico, dataNascimento, dataFalecimento, biografia, foto, idSexo)
+               # À ESPERA DE UM MILAGRE
+	  VALUES 
+              ('MICHAEL CLARKE DUNCAN', 
+			  'Michael Duncan', 
+              '1957-12-10',
+              '1957-09-03', 
+              'Michael Clarke Duncan é conhecido pela atuação em À Espera de um Milagre, que lhe rendeu indicações ao Oscar e ao Globo de Ouro de Melhor Ator Coadjuvante. Fez sua estreia nos cinemas em 1995, com um papel não creditado em Sexta-Feira em Apuros. O primeiro trabalho de destaque viria três anos depois com Armageddon. Agradou tanto que Bruce Willis recomendou que Frank Darabont contratasse ele para À Espera de um Milagre, em 1999.Muitas vezes tratado como Big Mike, por causa da altura de 1,96 m, o ator se destacou ainda em Meu Vizinho Mafioso, Planeta dos Macacos, O Escorpião Rei e A Ilha. Participou também de três adaptações dos quadrinhos: O Demolidor, Sin City - A Cidade do Pecado e Lanterna Verde. Robert Rodriguez contava com o retorno dele para Sin City 2: A Dame to Kill For, algo que infelizmente não irá mais acontecer.Na TV, Clarke Duncan contou com participações em importantes seriados, como Um Maluco no Pedaço, Bones, Chuck e Two and a Half Men. Faleceu em setembro de 2012, aos 54 anos, após passar dois meses hospitalizado em Los Angeles.',
+              'fotomichaelclarke.png', 
+              1);
