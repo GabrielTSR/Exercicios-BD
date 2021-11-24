@@ -127,3 +127,59 @@ alter table tblFilme
     #avg Calcula média e retorna valor decimal. 
     #Round aredonda para um número inteiro
     select round(avg(qtde),1) as mediaQtdeFilmes from tblFilme;
+    
+    #concat() - permite realizar a concatenação de dados
+    select concat('Filme: ', nome) as nomeFilme, nome,
+    concat('O filme ', nome, ' tem duração de : ', duracao) as resultado
+    from tblFilme;
+    
+    #concat_ws() - permite realizar a concatenação de dados, utilizando
+    #um caracter de seperação entre os dados
+    select concat_ws(' | ', nome, duracao, dataLancamento) as resultado from tblFilme;
+    
+    #locate() - retorna a posição da palavra ou caracter desejado
+    select locate('rei', sinopse) as resultado, sinopse from tblFilme;
+    
+    #reverse - permite inverter o conteudo da coluna
+    select reverse(nome) as resultado from tblFilme;
+    
+    #length ou char_length - retorna a quantidade de caracteres de uma coluna
+    select length(nome) as qtde, 
+				char_length(nome) as qtde2
+					from tblFilme;
+                    
+#Insert() - Permite inserir um novo conteúdo dentro do texto de uma coluna
+#insert(coluna, posição de início do novo conteúdo, qtde de caracteres que serão removidos, novo conteúdo que será inserido)
+	select insert(sinopse, 5, 0, ' videolocadora ') as resultado
+		from tblFilme;
+        
+        #Deixando em negrito a primeira ocorrência de "prisão"
+        select insert(sinopse, locate('prisão', sinopse), length('prisão'), '<b>prisão</b>') as resultado
+        from tblFilme;
+        
+#substr() --> Permite coletar um pedaço de um conteúdo 
+	select substr(sinopse, 1, locate(',', sinopse)) as resultado
+		from tblfilme;
+        
+#Ir até a vírgula, e mostrar um botão de saiba mais
+	select concat(substr(sinopse, 1, locate(',', sinopse)), '<a href="pagina.php">saiba mais...</>') as resultado
+		from tblfilme;
+        
+#replace() - permite localizar um conteúdo e substituir por outra coisa
+	select replace(sinopse, 'prisão', '<b>prisão</b>') as resultado
+        from tblFilme;
+        
+select * from tblFilme;
+
+alter table tblFilme add column valor float;
+
+update tblFilme set valor = '10.50' where idFilme = 4;
+
+select nome, qtde, valor, round((qtde * valor), 2) as valorTotal 
+from tblFilme;
+
+#Retornar 10% de desconto
+	select nome, 
+    sinopse, 
+    concat('R$ ', round(valor, 2)) as ValorOriginal, concat('R$ ', round((valor - (valor * 50)/100), 2)) as valorDesconto 
+    from tblFilme;
