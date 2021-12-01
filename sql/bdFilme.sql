@@ -471,14 +471,62 @@ INSERT INTO tblAtor(nome, nomeArtistico, dataNascimento, dataFalecimento, biogra
               '1957-09-03', 
               'Michael Clarke Duncan é conhecido pela atuação em À Espera de um Milagre, que lhe rendeu indicações ao Oscar e ao Globo de Ouro de Melhor Ator Coadjuvante. Fez sua estreia nos cinemas em 1995, com um papel não creditado em Sexta-Feira em Apuros. O primeiro trabalho de destaque viria três anos depois com Armageddon. Agradou tanto que Bruce Willis recomendou que Frank Darabont contratasse ele para À Espera de um Milagre, em 1999.Muitas vezes tratado como Big Mike, por causa da altura de 1,96 m, o ator se destacou ainda em Meu Vizinho Mafioso, Planeta dos Macacos, O Escorpião Rei e A Ilha. Participou também de três adaptações dos quadrinhos: O Demolidor, Sin City - A Cidade do Pecado e Lanterna Verde. Robert Rodriguez contava com o retorno dele para Sin City 2: A Dame to Kill For, algo que infelizmente não irá mais acontecer.Na TV, Clarke Duncan contou com participações em importantes seriados, como Um Maluco no Pedaço, Bones, Chuck e Two and a Half Men. Faleceu em setembro de 2012, aos 54 anos, após passar dois meses hospitalizado em Los Angeles.',
               'fotomichaelclarke.png', 
+              1),
+              ('DAVID MORSE', 
+			  null, 
+              '1957-10-11',
+              null, 
+              'David Morse é filho de Jacquelyn (professora) e de Charles Morse (encarregado de vendas). Tem três irmãs. Casou-se com Susan Duff a 19 de Junho de 1982. O casal teve três filhos e reside atualmente em Filadélfia, Pensilvânia.',
+              'fotodavidmorse.png', 
               1);
               
 INSERT INTO tbldiretor (nome, dataNascimento, nomeArtistico, biografia, foto, idSexo) VALUES
 	#FORREST GUMP
-
 	('Robert Lee Zemeckis', 
     '1952-05-14', 
-    '', 
+    null, 
     'Especialista em efeitos especiais, Robert Zemeckis é um dos partidários dos filmes do também diretor Steven Spielberg, que já produziu vários de seus filmes; - Trabalhando geralmente com seu parceiro de roteiros Bob Gale, os primeiros filmes de Robert apresentou ao público seu talento para comédias tipo pastelão', 
     'fotoRobert.png', 
     '1');
+    
+INSERT INTO tbldiretor (nome, dataNascimento, nomeArtistico, biografia, foto, idSexo) VALUES
+	#Um sonho de liberdade
+	('FRANK DARABONT', 
+    '1959-01-28', 
+    'Ardeth Bey', 
+    '- É o autor dos roteiros de "A Hora do Pesadelo 3", "A Mosca 2" e "Frankenstein de Mary Shelley".
+	 - Trabalhou como roteirista na série de TV norte-americana "O Jovem Indiana Jones"', 
+    'frankdara.png', 
+    '1');
+    
+INSERT INTO tbldiretor (nome, dataNascimento, nomeArtistico, biografia, foto, idSexo) VALUES
+	#O rei leão
+	('ROGER ALLERS', 
+    '1949-06-29', 
+    'null', 
+    'Roger Allers é um diretor, roteirista, artista de storyboard, cartunista e dramaturgo americano. Ele é mais conhecido por co-dirigir o filme de animação tradicional de maior bilheteria na história, O Rei Leão da Walt Disney Animation Studios, e por escrever a adaptação da Broadway, O Rei Leão.', 
+    'rogeraller.png', 
+    '1');
+    
+    INSERT INTO tbldiretor (nome, dataNascimento, nomeArtistico, biografia, foto, idSexo) VALUES
+	#A espera de um milagre
+	('FRANK DARABONT', 
+    '1959-01-28', 
+    'null', 
+    '- É o autor dos roteiros de "A Hora do Pesadelo 3", "A Mosca 2" e "Frankenstein de Mary Shelley".
+
+- Trabalhou como roteirista na série de TV norte-americana "O Jovem Indiana Jones".', 
+    'frankdarabont.png', 
+    '1');
+    
+    #tblFilmeAtor - Um sonho de liberdade
+    INSERT INTO tblfilmeator (idFilme, idAtor) VALUES (1, 1), (1, 2);
+    
+    #tblFilmeAtor - O rei leão
+    INSERT INTO tblfilmeator (idFilme, idAtor) VALUES (2, 3), (2, 4);
+    
+    #tblFilmeAtor - FORREST GUMP - O CONTADOR DE HISTÓRIAS
+    INSERT INTO tblfilmeator (idFilme, idAtor) VALUES (3, 5), (3, 6);
+    
+    #tblFilmeAtor - À ESPERA DE UM MILAGRE
+    INSERT INTO tblfilmeator (idFilme, idAtor) VALUES (4, 7), (4, 8);

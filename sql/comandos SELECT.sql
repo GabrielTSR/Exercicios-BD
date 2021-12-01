@@ -181,5 +181,115 @@ from tblFilme;
 #Retornar 10% de desconto
 	select nome, 
     sinopse, 
-    concat('R$ ', round(valor, 2)) as ValorOriginal, concat('R$ ', round((valor - (valor * 50)/100), 2)) as valorDesconto 
+    concat('R$ ', round(valor, 2)) as ValorOriginal, concat('R$ ', round((valor - (valor * 50)/100), 2)) as valorDesconto
     from tblFilme;
+    
+    
+   #RELACIONAMENTO ENTRE TABELAS NO BD
+    #FORMA 01 DE FAZER RELACIONAMENTO
+    select tblFilme.nome as nomeFilme, 
+			tblFilme.duracao, 
+            tblFilme.dataLancamento,
+			tblGenero.nome as nomeGenero 
+            from tblFilme, tblGenero, tblFilmeGenero
+            where tblFilme.idFilme = tblFilmeGenero.idFilme and
+            tblGenero.idGenero = tblFilmeGenero.idGenero;
+            
+            
+# FORMA 02 DE FAZER RELACIONAMENTO - (NO FROM)
+# ESSA FORMA DE RELACIONAR, CRIA UMA PERFORMANCE (PROCESSAMENTO) MAIS RÁPIDO NA GERAÇÃO DO RESULTADO
+# MAIS RÁPIDO NA GERAÇÃO DO RESULTADO
+
+#INNER JOIN - RETORNA DADOS QUE FORAM RELACIONADOS ENTRE A TABELA DA ESQUERDA E QUE CONTÉM RELAÇÃO COM A TABELA DA DIREITA
+	SELECT 
+    tblFilme.nome AS nomeFilme,
+    tblFilme.duracao,
+    tblFilme.dataLancamento,
+    tblGenero.nome AS nomeGenero
+	FROM
+    tblFilme
+        INNER JOIN
+    tblFilmeGenero ON tblFilme.idFilme = tblFilmeGenero.idFilme
+        INNER JOIN
+    tblGenero ON tblGenero.idGenero = tblFilmeGenero.idGenero;
+
+#LEFT JOIN - RETORNA DADOS QUE FORAM RELACIONADOS ENTRE A TABELA DA ESQUERDA E QUE CONTÉM RELAÇÃO COM A TABELA
+# DA DIREITA, PORÉM TAMBÉM RETORNA OS DADOS DA TABELA DA ESQUERDA QUE NÃO FORAM RELACIONADOS COM A TABELA DA DIREITA
+select tblFilme.nome as nomeFilme, tblFilme.duracao,
+       tblFilme.dataLancamento, tblGenero.nome as nomeGenero
+from tblFilme left join tblFilmeGenero
+	      on tblFilme.idFilme = tblFilmeGenero.idFilme
+       left join tblGenero
+		  on tblGenero.idGenero = tblFilmeGenero.idFilme
+          order by nomeGenero;
+
+
+#RIGHT JOIN
+
+  select tblFilme.nome as nomeFilme, tblFilme.duracao,
+       tblFilme.dataLancamento, tblGenero.nome as nomeGenero
+from tblFilme right join tblFilmeGenero
+	      on tblFilme.idFilme = tblFilmeGenero.idFilme
+       right join tblGenero
+		  on tblGenero.idGenero = tblFilmeGenero.idFilme
+          order by nomeGenero;
+          
+
+
+# APLICANDO FULL JOIN NO MY SQL
+# O FULL JOIN, PARA REPRESENTAR ESSE RESULTADO É NECESSÁRIO UTILIZAR
+# O COMANDO UNION (O COMANDO UNION SERVE PARA UNIR DOIS OU MAIS
+# SCRIPTS DE SELECT). CRIAMOS UMA SELECT APENAS COM O LEFT JOIN
+# E UNIMOS COM OUTRO SELECT COM RIGHT JOIN
+
+  select tblFilme.nome as nomeFilme, tblFilme.duracao,
+       tblFilme.dataLancamento, tblGenero.nome as nomeGenero
+from tblFilme right join tblFilmeGenero
+	      on tblFilme.idFilme = tblFilmeGenero.idFilme
+       right join tblGenero
+		  on tblGenero.idGenero = tblFilmeGenero.idFilme
+          
+          union all
+          
+          select tblFilme.nome as nomeFilme, tblFilme.duracao,
+       tblFilme.dataLancamento, tblGenero.nome as nomeGenero
+from tblFilme left join tblFilmeGenero
+	      on tblFilme.idFilme = tblFilmeGenero.idFilme
+       left join tblGenero
+		  on tblGenero.idGenero = tblFilmeGenero.idFilme
+          order by nomeGenero;
+          
+# Selecionar:  ¯\_(ツ)_/¯
+# => Nome do filme;
+# => Nome original do filme;
+# => Classificação;
+# => Nome do gênero
+# => Nome dos atores
+# Critério de busca:
+# => Atores nascidos a partir de 1965
+# => Todos os dados ordenados de forma crescente
+
+SELECT tblFilme.nome as nomeFilme,
+		tblFilme.nomeOriginal as nomeOriginalFilme,
+        tblClassificacao.nome as nomeClassificacao,
+        tblGenero.nome as nomeGenero,
+        tblAtor.nome as nomeAtor
+        
+        from tblClassificacao inner join tblFilme
+			on tblClassificacao.idClassificacao = tblFilme.idClassificacao
+            
+		inner join tblFilmeGenero 
+			on tblFilme.idFilme = tblFilmeGenero.idFilme
+        
+        inner join tblGenero
+			on tblGenero.idGenero = tblFilmeGenero.idGenero
+            
+		inner join tblFilmeAtor
+			on tblFilme.idFilme = tblFilmeAtor.idFilme
+            
+		inner join tblAtor
+			on tblAtor.idAtor = tblFilmeAtor.idAtor
+        
+		
+        where year(tblAtor.dataNascimento) >= 1965
+        order by nomeAtor asc;
