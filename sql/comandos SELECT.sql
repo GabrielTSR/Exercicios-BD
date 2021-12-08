@@ -269,6 +269,8 @@ from tblFilme left join tblFilmeGenero
 # => Atores nascidos a partir de 1965
 # => Todos os dados ordenados de forma crescente
 
+select * from tblator;
+
 SELECT tblFilme.nome as nomeFilme,
 		tblFilme.nomeOriginal as nomeOriginalFilme,
         tblClassificacao.nome as nomeClassificacao,
@@ -289,7 +291,178 @@ SELECT tblFilme.nome as nomeFilme,
             
 		inner join tblAtor
 			on tblAtor.idAtor = tblFilmeAtor.idAtor
-        
 		
-        where year(tblAtor.dataNascimento) >= 1965
+        #where year(tblAtor.dataNascimento) >= 1965
         order by nomeAtor asc;
+        
+        /*SELECT com o 
+        nome do filme, 
+        data de lançamento, 
+        sinopse, 
+        classificação, 
+        gênero, 
+        nome dos atores, 
+        data nascimento dos atores, 
+        nome do diretor, 
+        nome do roteirista, 
+        nacionalidade do ator
+        Ordenado pelo nome do filme crescente,
+        nome dos atores decrescente*/
+        SELECT * FROM dbfilmesturmab.tblFilmeRoteirista;
+        
+        SELECT tblFilme.nome as nomeFilme,
+		tblFilme.dataLancamento,
+		tblFilme.sinopse,
+        tblClassificacao.nome as nomeClassificacao,
+        tblGenero.nome as nomeGenero,
+        tblAtor.nome as nomeAtor,
+        tblAtor.dataNascimento,
+        tblDiretor.nome as nomeDiretor,
+        tblRoteirista.nome as nomeRoteirista,
+        tblNacionalidade.nome as nacionalidadeAtor
+        
+        from tblClassificacao inner join tblFilme
+			on tblClassificacao.idClassificacao = tblFilme.idClassificacao
+            
+		inner join tblFilmeGenero 
+			on tblFilme.idFilme = tblFilmeGenero.idFilme
+        
+        inner join tblGenero
+			on tblGenero.idGenero = tblFilmeGenero.idGenero
+            
+		inner join tblFilmeAtor
+			on tblFilme.idFilme = tblFilmeAtor.idFilme
+            
+		inner join tblAtor
+			on tblAtor.idAtor = tblFilmeAtor.idAtor
+            
+		inner join tblFilmeDiretor
+			on tblFilme.idFilme = tblFilmeDiretor.idFilme
+            
+		inner join tblDiretor
+			on tblDiretor.idDiretor = tblFilmeDiretor.idDiretor
+            
+		inner join tblFilmeRoteirista
+			on tblFilme.idFilme = tblFilmeRoteirista.idFilme
+            
+		inner join tblRoteirista
+			on tblRoteirista.idRoteirista = tblFilmeRoteirista.idRoteirista
+            
+		inner join tblAtorNacionalidade
+			on tblAtor.idAtor = tblAtorNacionalidade.idAtor
+            
+		inner join tblNacionalidade
+			on tblNacionalidade.idNacionalidade = tblAtorNacionalidade.idNacionalidade
+		
+        order by nomeFilme asc, nomeAtor desc;
+        
+        #CRIANDO UMA VIEW NO BD
+        # View - é uma tabela virtual criada com base em um select,
+        # que já é pré processada pelo banco de dados, e permite dar uma resposta muito mais ágil
+        # do que executar o script manualmente.
+        
+        create view vwListarFilme as
+			SELECT tblFilme.nome as nomeFilme,
+		tblFilme.dataLancamento,
+		tblFilme.sinopse,
+        tblClassificacao.nome as nomeClassificacao,
+        tblGenero.nome as nomeGenero,
+        tblAtor.nome as nomeAtor,
+        tblAtor.dataNascimento,
+        tblDiretor.nome as nomeDiretor,
+        tblRoteirista.nome as nomeRoteirista,
+        tblNacionalidade.nome as nacionalidadeAtor
+        
+        from tblClassificacao inner join tblFilme
+			on tblClassificacao.idClassificacao = tblFilme.idClassificacao
+            
+		inner join tblFilmeGenero 
+			on tblFilme.idFilme = tblFilmeGenero.idFilme
+        
+        inner join tblGenero
+			on tblGenero.idGenero = tblFilmeGenero.idGenero
+            
+		inner join tblFilmeAtor
+			on tblFilme.idFilme = tblFilmeAtor.idFilme
+            
+		inner join tblAtor
+			on tblAtor.idAtor = tblFilmeAtor.idAtor
+            
+		inner join tblFilmeDiretor
+			on tblFilme.idFilme = tblFilmeDiretor.idFilme
+            
+		inner join tblDiretor
+			on tblDiretor.idDiretor = tblFilmeDiretor.idDiretor
+            
+		inner join tblFilmeRoteirista
+			on tblFilme.idFilme = tblFilmeRoteirista.idFilme
+            
+		inner join tblRoteirista
+			on tblRoteirista.idRoteirista = tblFilmeRoteirista.idRoteirista
+            
+		inner join tblAtorNacionalidade
+			on tblAtor.idAtor = tblAtorNacionalidade.idAtor
+            
+		inner join tblNacionalidade
+			on tblNacionalidade.idNacionalidade = tblAtorNacionalidade.idNacionalidade
+		
+        order by nomeFilme asc, nomeAtor desc;
+        
+        SELECT * from vwListarFilme;
+        
+        desc vwListarFilme;
+        
+        #PERMITE ALTERAR O CONTEÚDO DE UMA VIEW
+		alter view vwListarFilme as
+			SELECT tblFilme.nome as nomeFilme,
+		tblFilme.dataLancamento,
+		tblFilme.sinopse,
+		tblClassificacao.nome as nomeClassificacao,
+		tblGenero.nome as nomeGenero,
+		tblAtor.nome as nomeAtor,
+		tblAtor.dataNascimento,
+		tblDiretor.nome as nomeDiretor,
+		tblRoteirista.nome as nomeRoteirista,
+		tblNacionalidade.nome as nacionalidadeAtor
+		
+		from tblClassificacao inner join tblFilme
+			on tblClassificacao.idClassificacao = tblFilme.idClassificacao
+			
+		inner join tblFilmeGenero 
+			on tblFilme.idFilme = tblFilmeGenero.idFilme
+		
+		inner join tblGenero
+			on tblGenero.idGenero = tblFilmeGenero.idGenero
+			
+		inner join tblFilmeAtor
+			on tblFilme.idFilme = tblFilmeAtor.idFilme
+			
+		inner join tblAtor
+			on tblAtor.idAtor = tblFilmeAtor.idAtor
+			
+		inner join tblFilmeDiretor
+			on tblFilme.idFilme = tblFilmeDiretor.idFilme
+			
+		inner join tblDiretor
+			on tblDiretor.idDiretor = tblFilmeDiretor.idDiretor
+			
+		inner join tblFilmeRoteirista
+			on tblFilme.idFilme = tblFilmeRoteirista.idFilme
+			
+		inner join tblRoteirista
+			on tblRoteirista.idRoteirista = tblFilmeRoteirista.idRoteirista
+			
+		inner join tblAtorNacionalidade
+			on tblAtor.idAtor = tblAtorNacionalidade.idAtor
+			
+		inner join tblNacionalidade
+			on tblNacionalidade.idNacionalidade = tblAtorNacionalidade.idNacionalidade
+		
+		order by nomeFilme asc, nomeAtor desc;
+		
+		SELECT * from vwListarFilme;
+		
+		desc vwListarFilme;
+        
+        #DROP VIEW
+        drop view vwListarFilme;

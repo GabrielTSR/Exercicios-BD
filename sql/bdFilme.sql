@@ -381,8 +381,8 @@ SELECT * FROM tblfilme;
 #Tabela Filme Gênero
 insert into tblFilmeGenero (idFilme, idGenero) values (1, 1),
 													  (2, 2),
-                                                      (2, 3),
-                                                      (2, 4);
+                                                      (3, 3),
+                                                      (4, 4);
 		
 select * from tblFilmeGenero;
 
@@ -490,7 +490,7 @@ INSERT INTO tbldiretor (nome, dataNascimento, nomeArtistico, biografia, foto, id
     '1');
     
 INSERT INTO tbldiretor (nome, dataNascimento, nomeArtistico, biografia, foto, idSexo) VALUES
-	#Um sonho de liberdade
+	#Um sonho de liberdade/A espera de um milagre
 	('FRANK DARABONT', 
     '1959-01-28', 
     'Ardeth Bey', 
@@ -508,17 +508,6 @@ INSERT INTO tbldiretor (nome, dataNascimento, nomeArtistico, biografia, foto, id
     'rogeraller.png', 
     '1');
     
-    INSERT INTO tbldiretor (nome, dataNascimento, nomeArtistico, biografia, foto, idSexo) VALUES
-	#A espera de um milagre
-	('FRANK DARABONT', 
-    '1959-01-28', 
-    'null', 
-    '- É o autor dos roteiros de "A Hora do Pesadelo 3", "A Mosca 2" e "Frankenstein de Mary Shelley".
-
-- Trabalhou como roteirista na série de TV norte-americana "O Jovem Indiana Jones".', 
-    'frankdarabont.png', 
-    '1');
-    
     #tblFilmeAtor - Um sonho de liberdade
     INSERT INTO tblfilmeator (idFilme, idAtor) VALUES (1, 1), (1, 2);
     
@@ -530,3 +519,31 @@ INSERT INTO tbldiretor (nome, dataNascimento, nomeArtistico, biografia, foto, id
     
     #tblFilmeAtor - À ESPERA DE UM MILAGRE
     INSERT INTO tblfilmeator (idFilme, idAtor) VALUES (4, 7), (4, 8);
+    
+    
+    SELECT * FROM dbfilmesturmab.tbldiretornacionalidade;
+    SELECT * FROM dbfilmesturmab.tblnacionalidade;
+    SELECT * FROM dbfilmesturmab.tblDiretor;
+    SELECT * FROM dbfilmesturmab.tblsexo;
+    SELECT * FROM dbfilmesturmab.tblfilmeDiretor;
+    SELECT * FROM dbfilmesturmab.tblfilme;
+    SELECT * FROM dbfilmesturmab.tblator;
+    SELECT * FROM dbfilmesturmab.tblestudio;
+    SELECT * FROM dbfilmesturmab.tblRoteirista;
+    
+    INSERT INTO tbldiretornacionalidade (idDiretor, idNacionalidade) VALUES (1, 5),(2, 4),(3, 2);
+    INSERT INTO tbldiretorSexo (idDiretor, idSexo) VALUES (1, 1),(2, 1),(3, 1);
+    INSERT INTO tblFilmeDiretor (idDiretor, idFilme) VALUES (1, 3),(2, 4),(2, 1),(3, 2);
+    INSERT INTO tblAtorsexo (idAtor, idSexo) VALUES (1, 1),(2, 1),(3, 1),(4, 1),(5, 1),(6, 2),(7, 1),(8, 1);
+    
+    INSERT INTO tblatornacionalidade (idAtor, idNacionalidade) VALUES (5, 2),(6, 2),(3, 2),(2, 2),(2, 1),(3, 1),(4, 1),(7, 2),(8, 2);
+    
+    INSERT INTO tblEstudio (nome) VALUES ('Columbia Pictures'),('Disney'),('Paramount'),('Warner Bros');
+    INSERT INTO tblFilmeEstudio (idEstudio, idFilme) VALUES (1,1),(2,2),(3,3),(4,4);
+    
+    INSERT INTO tblroteirista (nome, foto) VALUES ('Stephen Edwin King', 'fotoSthephen'),('Jonathan Roberts', 'fotoJonathan'),('Winston Groom', 'fotoWinston'),('Frank Darabont', 'fotoFrank');
+    INSERT INTO tblRoteiristaSexo (idRoteirista, idSexo) VALUES (1, 1),(2, 1),(3, 1),(4, 1);
+    INSERT INTO tblRoteiristaNacionalidade (idRoteirista, idNacionalidade) VALUES (1, 2),(2, 2),(3, 2),(4, 5);
+	INSERT INTO tblfilmeroteirista (idRoteirista, idFilme) VALUES (1, 1),(2, 2),(3, 3),(4, 4);
+    
+    
